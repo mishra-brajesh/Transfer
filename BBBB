@@ -1,0 +1,34 @@
+#Branch to test the AWS upgrade POC
+Repo : SSGS/ARCH-EDW-POC
+Branch Name: feature-ec2-airflow-test
+
+
+
+#Main branch for AWS upgrade
+Repo: SSGA/ASTRO-SEGN
+Branch Name: master(Prod), feature-astro-segn-1001(SBX), integration-astro-segn-1001(DEV), release-astro-segn-1001(UAT)
+
+
+Notes:
+1. Everytime we will run the file it will create a new ec2 machines and copy the DAG & up the airflow.
+2. bootstrap file will get trigger by CI/CD jenkins setup.
+3. wheel for AWS airflow-> AWS/Airflow/Astro-Files
+
+
+
+
+Questions:
+1. what is ELB?
+2. what is artifactory ?
+3. what is black duck ?
+4. what is use of grd.yaml file ?
+
+
+
+
+
+
+
+
+
+
