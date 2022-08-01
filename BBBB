@@ -25,7 +25,22 @@ Questions:
 
 
 
+airflow webserver -D \
+    --port 8080 \
+    -A $AIRFLOW_HOME/logs/webserver/airflow-webserver.out \
+    -E $AIRFLOW_HOME/logs/webserver/airflow-webserver.err \
+    -l $AIRFLOW_HOME/logs/webserver/airflow-webserver.log \
+    --pid $AIRFLOW_HOME/logs/webserver/airflow-webserver.pid \
+    --stderr $AIRFLOW_HOME/logs/webserver/airflow-webserver.stderr
+    --stdout $AIRFLOW_HOME/logs/scheduler/airflow-scheduler.stdout
 
+airflow scheduler
+
+airflow scheduler -D \
+    -l $AIRFLOW_HOME/logs/scheduler/airflow-scheduler.log \
+    --pid $AIRFLOW_HOME/logs/scheduler/airflow-scheduler.pid \
+    --stderr $AIRFLOW_HOME/logs/scheduler/airflow-scheduler.stderr \
+    --stdout $AIRFLOW_HOME/logs/scheduler/airflow-scheduler.stdout
 
 
 
